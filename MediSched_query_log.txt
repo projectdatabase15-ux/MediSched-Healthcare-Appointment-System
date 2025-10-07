@@ -1,0 +1,13 @@
+# MediSched — Assignment 3 Query Log 
+
+Paste outputs for Q1..Q9 below after running MediSched_queries.sql.
+
+[Q1 Output]
+[Q2 Output]
+[Q3 Output]
+[Q4 Output]
+[Q5 Output]
+[Q6 Output]
+[Q7 Output]
+[Q8 Output]
+[Q9 Output]
