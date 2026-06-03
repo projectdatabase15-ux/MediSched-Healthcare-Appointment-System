@@ -1,0 +1,22 @@
+-- sample_schema_notes.sql
+-- This file documents expected tables/columns for the search queries.
+-- Adjust names if your actual schema differs.
+
+-- users(UserID PK, Name, Email, Password, Role)
+-- doctors(DoctorID PK, UserID FK->users, Specialty, ExperienceYears)
+-- patients(PatientID PK, UserID FK->users, DateOfBirth, ContactNumber, MedicalHistory)
+-- timeslots(SlotID PK, DoctorID FK->doctors, StartTime, EndTime, AvailabilityStatus)
+-- appointments(AppointmentID PK, PatientID FK->patients, DoctorID FK->doctors, TimeSlotID FK->timeslots, AppointmentDate, AppointmentTime, Status)
+-- prescriptions(PrescriptionID PK, PatientID FK->patients, DoctorID FK->doctors, Medication, Dosage, Notes, DateIssued)
+
+-- Index hints:
+-- CREATE INDEX idx_users_name ON users(Name);
+-- CREATE INDEX idx_doctors_specialty ON doctors(Specialty);
+-- CREATE INDEX idx_doctors_userid ON doctors(UserID);
+-- CREATE INDEX idx_patients_userid ON patients(UserID);
+-- CREATE INDEX idx_timeslots_doctor ON timeslots(DoctorID, AvailabilityStatus, StartTime);
+-- CREATE INDEX idx_appointments_date ON appointments(AppointmentDate, AppointmentTime, Status);
+-- CREATE INDEX idx_appointments_doctor ON appointments(DoctorID);
+-- CREATE INDEX idx_appointments_patient ON appointments(PatientID);
+-- CREATE INDEX idx_prescriptions_date ON prescriptions(DateIssued);
+-- CREATE INDEX idx_prescriptions_patient ON prescriptions(PatientID);
