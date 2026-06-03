@@ -1,14 +1,25 @@
-## Project Description
+# MediSched – Healthcare Appointment System
 
-The Healthcare Appointment System aims to simplify and streamline the process of booking 
-and managing doctor appointments for a clinic or hospital. It provides a centralized 
-platform where doctors, patients, and administrators can interact efficiently.
+A university database module project. The system models a healthcare platform where doctors, patients, and administrators manage appointments, schedules, and prescriptions.
 
-### Features
+## What this system does
 
-- **Patients:** Register, log in, search doctors, book/reschedule/cancel appointments, view prescriptions & upcoming visits.
-- **Doctors:** Manage schedules, set availability slots, update prescriptions after consultations.
-- **Administrators:** Manage users, generate appointment reports, resolve booking conflicts.
+- Patients can search for doctors, book/reschedule/cancel appointments, and view prescriptions
+- Doctors manage availability slots and issue prescriptions after consultations
+- Administrators manage users and oversee the system
+- The schema enforces that no two patients can book the same slot with the same doctor
 
-The system ensures that no two patients can book the same slot with the same doctor, 
-improving clinic workflow and patient experience while helping doctors manage their time effectively.
+## Repository structure
+
+| Folder / File | Description |
+| `medisched/` | **Assignment 6 — Main search component.** Full LAMP PHP app with three search flows, admin panel, and complete database schema. This is the primary deliverable. |
+| `MediSched_A5_InputComponent/` | Assignment 5 — Input forms for creating doctors, patients, appointments, prescriptions, and timeslots |
+| `public_web/` | Assignment 4 — Static HTML website for the MediSched concept |
+| `MediSched.sql` | Original database schema (superseded by `medisched/sql/schema.sql`) |
+| `MediSched_queries.sql` | Query development notes |
+| `er_doc.md` | Entity-relationship documentation |
+| `Mapping Approach.pdf` | Schema mapping document |
+
+## Getting started
+
+The latest and most complete code is in the **`medisched/`** folder. It includes a full setup guide in its own README.
